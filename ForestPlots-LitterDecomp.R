@@ -18,7 +18,7 @@
 # and a sheet in doc called 'LitterDeg-compliled
 
 setwd("C:/Users/Camilla/Dropbox/Data & analysis/WP3 Slurry disturbance/R")
-
+library(ggplot2)
 
 D1 <- read.table(file="LitterDecompForest.txt", header=T, sep='\t')
 
@@ -32,7 +32,8 @@ p <- ggplot(D1, aes(x=timepoint, y=LitterDecomp, ymin=LitterDecomp-pSd, ymax=Lit
   geom_pointrange(size=0.75)+
   geom_hline(yintercept = 1.72, linetype=2)+ # y intercept= Av of all control resp
   coord_flip(ylim = c(0.12, 7))+
-  xlab('Time Point')+
+  xlab('Time Point')+ 
+  ylab(expression(paste('Litter decomposition rate (', mu, 'g ', C-CO[2],' ', g^-1, 'soil ', hr^-1, ' )' ))) +
   geom_point(colour="black", shape=21, size = 10) +
   aes(fill = factor(Treatment)) + 
   scale_fill_manual(values=c("black", "chocolate4", "slateblue", "olivedrab"))
