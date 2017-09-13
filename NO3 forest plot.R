@@ -51,7 +51,7 @@ p <- ggplot(Avs, aes(x=timepoint, y=av, ymin=av-sdv, ymax=av+sdv))+
   scale_fill_manual(values=c("black", "chocolate4", "slateblue", "olivedrab"))
 p
 
-p1 = p + ylab(expression(paste('Nitrate concentration (g ', N-NO[3],' ', g^-1, 'soil ) ')))
+p1 = p + ylab(expression(paste('Nitrate concentration (mg ', NO[3]^{"-"},'-N ', kg^-1, 'soil ) ')))
 
 
 # legend on side with heading

@@ -28,23 +28,23 @@ p2 <- p + theme_bw() +
         legend.title = element_text(size=17),
         axis.title.y=element_blank())+
   labs(fill="    Treatment") +
-  ylab(expression(paste('Ammonium concentration (g ', NH[4],' ', kg^-1, ' soil) '))) 
+  ylab(expression(paste('Ammonium concentration (mg ', NH[4]^{"-"},'-N ', kg^-1, ' soil) '))) 
   
 p2
 
 
-p2 <- p + theme_bw() + 
-  theme(axis.text.y=element_text(size=17, colour="black")) +
-  theme(axis.text.x=element_text(size=16, colour="black"))+
-  #theme(legend.title=element_text(name="Treatment"))
-  theme(legend.text = element_text(size=15)) +
-  theme(legend.title = element_text(size=16)) +
-  labs(fill="Treatment") + 
-  ylab(expression(paste('Ammonium concentration (g ', NH[4],' ', kg^-1, ' soil) '))) +
-theme(axis.title.x=element_text(size=16, colour = "black"))+
-      theme(axis.title.y=element_blank())
-# y="Ammonium concentration (g NH4 / kg soil)") 
-p2
+# p2 <- p + theme_bw() + 
+#   theme(axis.text.y=element_text(size=17, colour="black")) +
+#   theme(axis.text.x=element_text(size=16, colour="black"))+
+#   #theme(legend.title=element_text(name="Treatment"))
+#   theme(legend.text = element_text(size=15)) +
+#   theme(legend.title = element_text(size=16)) +
+#   labs(fill="Treatment") + 
+#   ylab(expression(paste('Ammonium concentration (g ', NH[4],' ', kg^-1, ' soil) '))) +
+# theme(axis.title.x=element_text(size=16, colour = "black"))+
+#       theme(axis.title.y=element_blank())
+# # y="Ammonium concentration (g NH4 / kg soil)") 
+# p2
 
 p2 + theme(axis.title=element_text(size=14))
 
